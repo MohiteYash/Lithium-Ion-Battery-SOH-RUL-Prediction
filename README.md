@@ -4,7 +4,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-TensorFlow-orange)
 ![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF)
-![Status](https://img.shields.io/badge/Status-Research%20Ready-success)
 
 An end-to-end deep learning framework for predicting **State of Health (SOH)** and  
 **Remaining Useful Life (RUL)** of lithium-ion batteries using cycle-level

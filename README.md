@@ -103,10 +103,36 @@ The performance of the proposed deep learning models was evaluated using
 | CNN–RNN–Attention | 12.76664302 | 16.96857146 |
 
 <img width="691" height="393" alt="download" src="https://github.com/user-attachments/assets/b71df20a-8a31-4d0b-8030-6c13850de3db" />
+This figure compares true SOH values with model predictions across test samples.
 
+- The model successfully captures gradual SOH degradation trends
+- Predicted SOH follows the true SOH trajectory with minimal lag
+- Minor fluctuations occur during rapid degradation phases
+
+Overall, the model demonstrates robust SOH estimation capability suitable for
+long-term battery health monitoring.
 <img width="695" height="393" alt="download" src="https://github.com/user-attachments/assets/c72e766f-98e2-46a5-8241-43e8ab305709" />
+This plot shows the true and predicted RUL values across test samples, along with
+a **±2σ confidence interval** obtained using uncertainty estimation.
 
+- The predicted RUL closely tracks the true RUL trend
+- Wider uncertainty bands appear near abrupt degradation regions
+- Confidence intervals provide insight into prediction reliability,
+  especially near end-of-life (EOL)
+
+This uncertainty-aware prediction is valuable for risk-sensitive decision-making
+in Battery Management Systems (BMS).
 <img width="463" height="470" alt="download" src="https://github.com/user-attachments/assets/c550a9ca-fc07-4b96-b4dd-6f07dfc0eec5" />
+The scatter plot compares the predicted RUL values against the true RUL values
+for test samples. The red dashed diagonal line represents ideal predictions
+(where predicted RUL equals true RUL).
+
+- Most predictions closely follow the ideal diagonal trend
+- Slight deviations are observed at very low and very high RUL values
+- The model demonstrates strong correlation and low bias across the operating range
+
+This indicates effective learning of nonlinear degradation behavior from
+cycle-level battery data.
 
 
 > These results demonstrate effective modeling of nonlinear battery degradation

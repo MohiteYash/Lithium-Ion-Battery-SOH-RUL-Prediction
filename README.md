@@ -6,44 +6,104 @@
 ![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF)
 ![Status](https://img.shields.io/badge/Status-Research%20Ready-success)
 
----
+An end-to-end deep learning framework for predicting **State of Health (SOH)** and  
+**Remaining Useful Life (RUL)** of lithium-ion batteries using cycle-level
+degradation data.
 
-## 📌 Project Description
-
-This repository provides a **complete, end-to-end deep learning framework** for predicting the **State of Health (SOH)** and **Remaining Useful Life (RUL)** of lithium-ion batteries using **real experimental aging data**.
-
-The project focuses on:
-- Battery degradation modeling using time-series data  
-- Attention mechanisms to identify important degradation stages  
-- Uncertainty estimation for safer and more reliable predictions  
-
-This work is suitable for **battery prognostics and health management (PHM)** applications such as:
-- Electric Vehicles (EVs)
-- Energy Storage Systems (ESS)
-- Predictive Maintenance
-- Battery Management Systems (BMS)
+This project targets practical battery health monitoring for **Battery
+Management Systems (BMS)** and predictive maintenance applications.
 
 ---
 
-## ✨ Key Features
+## 🚀 Key Features
 
-- Real-world battery aging data (NASA dataset)
-- Cycle-level feature engineering
-- CNN–LSTM–Multi-Head Attention for SOH estimation
-- CNN–RNN–Multi-Head Attention for RUL prediction
-- Monte-Carlo Dropout for uncertainty estimation
-- Reproducible, research-ready pipeline
-- Kaggle-compatible implementation
+- SOH prediction from historical battery cycle data  
+- RUL prediction in remaining charge–discharge cycles  
+- Hybrid **CNN–LSTM/RNN–Attention** deep learning architecture  
+- Joint learning of SOH and RUL  
+- Evaluation using standard error metrics (MAE, RMSE)  
+- Scalable and deployment-ready pipeline  
 
 ---
 
-## 📂 Dataset Information
+## ❓ Problem Statement
 
-- **Dataset:** NASA Lithium-Ion Battery Aging Dataset  
-- **Format:** Preprocessed cycle-level CSV  
-- **Platform:** Kaggle  
+Lithium-ion batteries degrade due to electrochemical aging, thermal stress,
+and operational variability. Accurate estimation of **SOH** and **RUL** is
+critical for ensuring safety, reliability, and cost-effective operation in:
 
-### Dataset Path (Kaggle)
-```text
-/kaggle/input/nasa-battery-cycle-level-dataset/
-battery_cycle_level_dataset_CLEAN_FINAL.csv
+- Electric Vehicles (EVs)  
+- Energy storage systems  
+- Predictive maintenance frameworks  
+
+Conventional model-based methods struggle with nonlinear degradation behavior.
+This project applies deep learning to directly learn degradation patterns from
+battery aging data.
+
+---
+
+## 🏗️ Model Architecture
+
+The proposed framework consists of:
+
+- **CNN** – Extracts local degradation-related features  
+- **LSTM / RNN** – Models long-term temporal dependencies  
+- **Attention Mechanism** – Emphasizes critical degradation stages  
+- **Dual Output Heads** – Independent prediction of SOH and RUL  
+
+<img width="7000" height="780" alt="image" src="https://github.com/user-attachments/assets/3a8ae1ba-a6c6-4140-8d70-900851bc8048" />
+
+## 📂 Dataset
+
+This project uses a publicly available lithium-ion battery degradation dataset
+hosted on Kaggle and referenced using a permanent Digital Object Identifier (DOI).
+
+**Dataset DOI:**  
+https://doi.org/10.34740/kaggle/dsv/14272939
+
+### Dataset Details
+- Cycle-level lithium-ion battery aging data  
+- Measured parameters include:
+  - Voltage  
+  - Current  
+  - Temperature  
+  - Capacity  
+- Format: CSV (converted from original MAT files)  
+- Train–test split performed at **battery level** to avoid data leakage  
+
+---
+
+## 🔄 Workflow
+
+1. Dataset loading and preprocessing  
+2. Feature normalization  
+3. Time-series sequence generation  
+4. Model training  
+5. SOH and RUL prediction  
+6. Performance evaluation  
+7. Result visualization  
+
+---
+
+## 📊 Results
+
+The performance of the proposed deep learning models was evaluated using  
+**Mean Absolute Error (MAE)** and **Root Mean Square Error (RMSE)**.
+
+### 🔋 State of Health (SOH)
+
+| Model | MAE | RMSE |
+|------|-----|------|
+| CNN–LSTM–Attention | 0.0759966731 | 0.0840301867 |
+
+### ⏳ Remaining Useful Life (RUL)
+
+| Model | MAE (cycles) | RMSE (cycles) |
+|------|--------------|---------------|
+| CNN–RNN–Attention | 12.76664302 | 16.96857146 |
+
+> These results demonstrate effective modeling of nonlinear battery degradation
+patterns. The attention mechanism improves prediction robustness, particularly
+near end-of-life (EOL) regions.
+
+

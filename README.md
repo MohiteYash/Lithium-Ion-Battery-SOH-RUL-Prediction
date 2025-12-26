@@ -15,7 +15,7 @@ Management Systems (BMS)** and predictive maintenance applications.
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 - SOH prediction from historical battery cycle data  
 - RUL prediction in remaining charge–discharge cycles  
@@ -26,7 +26,7 @@ Management Systems (BMS)** and predictive maintenance applications.
 
 ---
 
-## ❓ Problem Statement
+## Problem Statement
 
 Lithium-ion batteries degrade due to electrochemical aging, thermal stress,
 and operational variability. Accurate estimation of **SOH** and **RUL** is
@@ -42,7 +42,7 @@ battery aging data.
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 The proposed framework consists of:
 
@@ -53,7 +53,7 @@ The proposed framework consists of:
 
 <img width="7000" height="780" alt="image" src="https://github.com/user-attachments/assets/3a8ae1ba-a6c6-4140-8d70-900851bc8048" />
 
-## 📂 Dataset
+## Dataset
 
 This project uses a publicly available lithium-ion battery degradation dataset
 hosted on Kaggle and referenced using a permanent Digital Object Identifier (DOI).
@@ -73,7 +73,7 @@ https://doi.org/10.34740/kaggle/dsv/14272939
 
 ---
 
-## 🔄 Workflow
+## Workflow
 
 1. Dataset loading and preprocessing  
 2. Feature normalization  
@@ -85,22 +85,29 @@ https://doi.org/10.34740/kaggle/dsv/14272939
 
 ---
 
-## 📊 Results
+## Results
 
 The performance of the proposed deep learning models was evaluated using  
 **Mean Absolute Error (MAE)** and **Root Mean Square Error (RMSE)**.
 
-### 🔋 State of Health (SOH)
+### State of Health (SOH)
 
 | Model | MAE | RMSE |
 |------|-----|------|
 | CNN–LSTM–Attention | 0.0759966731 | 0.0840301867 |
 
-### ⏳ Remaining Useful Life (RUL)
+### Remaining Useful Life (RUL)
 
 | Model | MAE (cycles) | RMSE (cycles) |
 |------|--------------|---------------|
 | CNN–RNN–Attention | 12.76664302 | 16.96857146 |
+
+<img width="691" height="393" alt="download" src="https://github.com/user-attachments/assets/b71df20a-8a31-4d0b-8030-6c13850de3db" />
+
+<img width="695" height="393" alt="download" src="https://github.com/user-attachments/assets/c72e766f-98e2-46a5-8241-43e8ab305709" />
+
+<img width="463" height="470" alt="download" src="https://github.com/user-attachments/assets/c550a9ca-fc07-4b96-b4dd-6f07dfc0eec5" />
+
 
 > These results demonstrate effective modeling of nonlinear battery degradation
 patterns. The attention mechanism improves prediction robustness, particularly
